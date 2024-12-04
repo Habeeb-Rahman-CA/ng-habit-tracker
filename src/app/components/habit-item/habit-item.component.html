@@ -1,0 +1,9 @@
+<div class="flex items-center m-4 justify-between p-4 bg-gray-800 rounded-md">
+    <span class="text-white">{{ habit.name }}</span>
+    <button (click)="habit.completed = !habit.completed" [ngClass]="{
+        'bg-green-600': habit.completed,
+        'bg-gray-600': !habit.completed
+      }" class="px-4 py-2 text-white rounded-full">
+        {{ habit.completed ? 'Completed' : 'Mark Complete' }}
+    </button>
+</div>
